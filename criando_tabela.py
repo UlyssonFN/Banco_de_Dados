@@ -21,3 +21,16 @@ conexao.close()
 
 #mostra uma msginha do coração
 print("Tabela criada com sucesso ")
+
+#Explicando sobre a criação da tabela
+#Criar a tabela chamada produtos
+#CREATE TABLE IF NOT EXISTS produtos
+
+#Cria a coluna id, INTERGER significa número inteiro, PRIMARY KEY identifica cada registro de forma única, AUTOINCREMENT o número preenche de forma automática em ordem.
+#id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+#Cria a coluna preco, REAL é utilizado para números com casas decimais, NOT NULL quer dizer que o valor da coluna não pode ser nulo/vazio.
+#preco REAL NOT NULL,
+
+#Cria a coluna estoque, INTEGER já sabe o que é né? Número inteiro, DEFAULT 0 significa que, senão informarmos estoque o valor será automaticamente 0
+#estoque INTEGER DEFAULT 0
