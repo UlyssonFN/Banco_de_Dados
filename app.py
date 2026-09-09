@@ -4,7 +4,7 @@ import sqlite3
 #Cria uma conexão com o banco de dados, se o arquivo "banco.bd" não existir, o SQLIte ira cria-lo de forma automatica. 
 conexao = sqlite3.connect("banco.bd")
 
-#Exite a msg para mostrar que deu tudo certo rsrs!
+#Exibe a msg para mostrar que deu tudo certo rsrs!
 print("Banco conectado com sucesso!")
 
 #Fecha a conexão com o banco de dados, vai observar que muito dos nossos códigos vão sempre fechar, o SQLite em particular não tem um bom desempenho em muitos acessos simutâneos! 
