@@ -18,11 +18,10 @@ cursor.execute("""SELECT nome, preco FROM produtos WHERE nome=?""",('Macbook',))
 #também pode ser feito via método de escrita SQL
 #cursor.execute("SELECT nome, preco FROM produtos WHERE nome='Macbook'")
 
-#Percorre cada produto encontrado
-produtos = cursor.fetchone()
-for nome in produtos:
-    #Mostra o resultado do que foi encontrado
-    print(nome)
+#Armazena o resultado na variável nome
+nome = cursor.fetchone()
+#Mostra o resultado do que foi encontrado
+print(nome)
     
 #Fecha a conexão com o banco de dados
 conexao.close()
