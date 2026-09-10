@@ -1,3 +1,5 @@
+#Tutorial 04 - Nessa etapa vamos aprender a consultar nossa tabela e aprender a pesquisar com alguns filtros!
+
 #Importa a biblioteca
 import sqlite3
 #Realiza a conexão com o banco de dados.
@@ -25,3 +27,6 @@ print(nome)
     
 #Fecha a conexão com o banco de dados
 conexao.close()
+
+
+#PS: Todo dia postarei um novo código do projeto

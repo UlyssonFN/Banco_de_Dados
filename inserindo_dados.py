@@ -1,4 +1,5 @@
-#Etapa de inserção de dados dentro do banco
+#Tutorial 03 - Etapa de inserção de dados dentro do banco, precisamos dar vida a nossa tabela né!
+
 #Importar a biblioteca
 import sqlite3
 
@@ -25,3 +26,6 @@ conexao.close()
 print("Produto cadastrado com sucesso!") 
 
 #Um dica bem legal é que no lugar dos valores é possível colocar variáveis, ou seja, é possível criar inputs com interação de usuários para operarem sem mexer no código.
+
+
+#PS: Todo dia postarei um novo código do projeto

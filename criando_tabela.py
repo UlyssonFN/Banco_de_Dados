@@ -1,5 +1,9 @@
+#Tutorial 02 - Iremos aprender a como criar uma tabela dentro do banco de dados que acabamos de criar no tutorial 01.
+
+#Importando a biblioteca do SQLite
 import sqlite3
 
+#Estabelece a conexão com o banco de dados
 conexao = sqlite3.connect("banco.bd")
 #criar a variável chamada cursor, o cursor é utilizado para enviar o comandos SQL para o banco
 cursor = conexao.cursor()
@@ -34,3 +38,5 @@ print("Tabela criada com sucesso ")
 
 #Cria a coluna estoque, INTEGER já sabe o que é né? Número inteiro, DEFAULT 0 significa que, senão informarmos estoque o valor será automaticamente 0
 #estoque INTEGER DEFAULT 0
+
+#PS: Todo dia postarei um novo código do projeto
