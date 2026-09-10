@@ -13,7 +13,7 @@ cursor = conexao.cursor()
 cursor.execute("""
                INSERT INTO produtos (nome, preco, estoque)
                VALUES (?, ?, ?)
-               """, ("He4rt", 0.01, 1000))
+               """, ("Macbook", 1750, 1))
 
 #Salva o cadastro no banco.
 conexao.commit()
