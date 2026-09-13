@@ -16,7 +16,7 @@ cursor.execute("""
                VALUES (?, ?, ?)
                """, ("Macbook", 1750, 1))
 
-#cria uma lista contendo vários produtos
+#Cria uma lista contendo vários produtos
 produtos = [ 
     ("Mouse", 49.90, 20),
     ("Monitor", 899.90, 8),
@@ -24,7 +24,7 @@ produtos = [
     ("Headset", 149.90, 12)        
             ]
 
-#insere todos os produtos da lista
+#Insere todos os produtos da lista
 cursor.executemany("""
     INSERT INTO produtos (nome, preco, estoque)
     VALUES (?, ?, ?)
@@ -33,15 +33,11 @@ cursor.executemany("""
 #Salva o cadastro no banco.
 conexao.commit()
 
-#fecha a conexão com o banco.
+#Fecha a conexão com o banco.
 conexao.close()
 
-#enfeite de sempre
+#Enfeite de sempre
 print("Produto cadastrado com sucesso!") 
-
-
-
-
 
 #Um dica bem legal é que no lugar dos valores é possível colocar variáveis, ou seja, é possível criar inputs com interação de usuários para operarem sem mexer no código.
 
