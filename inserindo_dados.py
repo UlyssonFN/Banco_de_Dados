@@ -17,18 +17,18 @@ cursor.execute("""
                """, ("Macbook", 1750, 1))
 
 #Cria uma lista contendo vários produtos
-produtos = [ 
-    ("Mouse", 49.90, 20),
-    ("Monitor", 899.90, 8),
-    ("Teclado", 89.90, 15),
-    ("Headset", 149.90, 12)        
-            ]
+#produtos = [ 
+#    ("Mouse", 49.90, 20),
+#    ("Monitor", 899.90, 8),
+#    ("Teclado", 89.90, 15),
+#    ("Headset", 149.90, 12)        
+#            ]
 
 #Insere todos os produtos da lista
-cursor.executemany("""
-    INSERT INTO produtos (nome, preco, estoque)
-    VALUES (?, ?, ?)
-    """, produtos)
+#cursor.executemany("""
+#    INSERT INTO produtos (nome, preco, estoque)
+#    VALUES (?, ?, ?)
+#    """, produtos)
 
 #Salva o cadastro no banco.
 conexao.commit()
