@@ -14,7 +14,7 @@ cursor.execute("""
     DELETE FROM produtos WHERE id = '3'                         
                """)
 
-#Exclui a tabela
+#Exclui a tabela (hhhhhA tão temida exclusão, cuidado com esse comando eim!)
 #DROP TABLE produtos;
 
 #Deleta todos os registro da tabela
