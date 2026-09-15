@@ -30,3 +30,4 @@ conexao.commit()
 #Fecha o banco de dados
 conexao.close()
 
+#PS: Todo dia postarei um novo código do projeto

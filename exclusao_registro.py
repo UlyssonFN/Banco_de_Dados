@@ -33,4 +33,5 @@ conexao.close()
 
 #Informa que o produto foi excluido
 print("Produto excluído com sucesso!!!!")
- 
+
+#PS: Todo dia postarei um novo código do projeto
