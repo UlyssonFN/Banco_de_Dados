@@ -9,6 +9,8 @@ SQLite, atualmente ainda é muito utlizando para pequenos projetos e para aprend
 
 Python, Biblioteca nativa SQLite, BD Browser, PowerBI
 
+Sobre o BD Browser eu criei um arquivo md para melhor ensinar o tutorial
+
 ## Objetivo
 O que iremos aprender
 Um pouco sobre SQLite (Nativo do Python)
