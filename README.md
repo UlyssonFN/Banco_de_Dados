@@ -62,5 +62,5 @@ Dentro de todos os projetos que já fiz em minha carreira e projetos pessoais, s
 ## Autor
 
 Ulysson Fontenele Nobre - Estudande de Engenharia de Software, Técnico em Análise e Desenvolvimento de sistemas, Tecnólogo em Logística, MBA em Bussiness Inteligence e Pós Graduado em Análise de dados.
-
+17/09 Não postarei muita coisa, estou em saída de uma empresa para outra, um sonho realizado, muito emotivo rsrs
 
