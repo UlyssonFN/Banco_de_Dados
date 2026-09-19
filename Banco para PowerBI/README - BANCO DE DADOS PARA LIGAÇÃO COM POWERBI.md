@@ -8,6 +8,13 @@ Principal ideia criar um sistema backend com login, cadastro de usuários, produ
 login - cadastro de usuários - cadastro de produtos - venda de produtos
 Criar regra de hierarquia de usuários (admin acesso a tudo, vendedor terá acesso somente a venda)
 
+ - Criar banco de dados 
+ - Criar tabelas
+ - Criar menu.py
+ - Criar usuario.py
+ - Criar produtos.py
+ - Criar vendas.py
+
 # Estrutura Banco de dados
 
 Tabelas {USUARIOS, PRODUTOS, VENDAS}
@@ -19,12 +26,13 @@ Tabelas {USUARIOS, PRODUTOS, VENDAS}
 - ID - AUTOINCREMENT
 - NOME
 - NIVEL - VENDEDOR OU ADMIN
+- SENHA
 - STATUS - ATIVO OU INATIVO
 
 {PRODUTOS}
 
 - ID - AUTOINCREMENT
-- COD_BARRA
+- COD_BARRA INTEGER UNIQUE NOT NULL
 - DESCRICAO
 - VALOR_COMPRA - FLOAT
 - VALOR_VENDA - FLOAT
@@ -38,5 +46,5 @@ Tabelas {USUARIOS, PRODUTOS, VENDAS}
 - DESCCRICAO
 - QUANTIDADE_VENDA - FLOAT
 - VALOR_VENDA - FLOAT
-- VALOR_TOTAL
+- VALOR_TOTAL - FLOAT
 - DATA

@@ -1,0 +1,40 @@
+import sqlite3
+
+conexao = sqlite3.connect("BDSYS.bd")
+
+cursor = conexao.cursor()
+
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS USUARIOS (
+        ID INTEGER PRIMARY KEY AUTOINCREMENT,
+        NOME TEXT UNIQUE NOT NULL,
+        NIVEL TEXT NOT NULL,
+        SENHA TEXT NOT NULL,
+        STATUS TEXT NOT NULL
+    )""")
+
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS PRODUTOS (
+        ID INTEGER PRIMARY KEY AUTOINCREMENT,
+        COD_BARRA INTEGER UNIQUE NOT NULL,
+        DESCRICAO TEXT NOT NULL,
+        VALOR_COMPRA FLOAT NOT NULL,
+        VALOR_VENDA FLOAT NOT NULL,
+        QUANTIDADE INTEGER NOT NULL,
+        STATUS TEXT NOT NULL
+    )""")
+
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS VENDAS (
+        ID INTEGER PRIMARY KEY AUTOINCREMENT,
+        COD_BARRA INTEGER UNIQUE NOT NULL,
+        DESCRICAO TEXT NOT NULL,
+        QUANTIDADE_VENDA INTEGER NOT NULL,
+        VALOR_VENDA FLOAT NOT NULL,
+        VALOR_TOTAL FLOAT NOT NULL,
+        DATA TEXT NOT NULL
+    )""")
+
+conexao.commit()
+
+conexao.close()
