@@ -12,22 +12,24 @@ Python, Biblioteca nativa SQLite, BD Browser, PowerBI
 Sobre o BD Browser eu criei um arquivo md para melhor ensinar o tutorial
 
 ## Objetivo
+
 O que iremos aprender
-Um pouco sobre SQLite (Nativo do Python)
-Como criar nosso primeiro banco de dados
-importação de biblioteca
-conceitos de ligação
-conceitos de criação de tabelas
-conceitos de inserção de dados
+- Um pouco sobre SQLite (Nativo do Python)
+- Como criar nosso primeiro banco de dados
+- importação de biblioteca
+- conceitos de ligação
+- conceitos de criação de tabelas
+- conceitos de inserção de dados
 
 ## Estrutura do Projeto
-banco.bd
-app.py - criar banco
-criando_tabelas.py
-inserindo_dados.py
-consultar.py
-atualizar.py
-excluir.py
+
+- banco.bd
+- app.py - criar banco
+- criando_tabelas.py
+- inserindo_dados.py
+- consultar.py
+- atualizar_registro.py
+- exclusao_registro.py
 
 
 ## Como executar
@@ -36,20 +38,22 @@ Software necessários VsCode, Linguagem Python, Biblioteca sqlite3
 BD Browser, PowerBI
 
 ## Funcionalidades
-Criação de banco de dados.
-Criação de tabelas.
-Inserções de dados.
-Exclusões de dados.
-Alterações de dados.
-Conceitos básicos gerais.
-Ligação com banco de dados PowerBI
+
+- Criação de banco de dados.
+- Criação de tabelas.
+- Inserções de dados.
+- Exclusões de dados.
+- Alterações de dados.
+- Conceitos básicos gerais.
+- Ligação com banco de dados PowerBI
 
 ### Contrução de Gráficos PowerBI
-Gráfico de Barras
-Gráficos de Pizza
-Gráficos de Pareto
-Gráfico de Linha
-Atualização em tempo real
+
+- Gráfico de Barras
+- Gráficos de Pizza
+- Gráficos de Pareto
+- Gráfico de Linha
+- Atualização em tempo real
 
 ### Consultas e alterações via Software
 
