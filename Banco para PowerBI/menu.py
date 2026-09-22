@@ -3,10 +3,17 @@ import sqlite3
 
 conexao = sqlite3.connect("BDSYS.bd")
 
-cursor = conexao.cursor()
-
 user = input("Usuário: ")
 password = input("Senha: ")
+
+
+cursor = conexao.cursor()
+
+conexao.commit()
+
+conexao.close()
+
+
 
 
 
