@@ -1,37 +1,25 @@
 #menu
-import sqlite3
 
-conexao = sqlite3.connect("BDSYS.bd")
-
-cursor = conexao.cursor()
-try:
-    user = input("Usuário: ")
-    password = input("Senha: ")
-
-    cursor.execute("""
-                SELECT NOME FROM USUARIOS WHERE NOME=?""",(user,))
-
-    (usuario,) = cursor.fetchone()
-
-    cursor.execute("""
-                SELECT SENHA FROM USUARIOS WHERE SENHA=?""",(password,))
-
-    (senha,) = cursor.fetchone()
-
-    if user == usuario and password == senha:
-        print("Bem vindo ao sistema")
+def opcoes():
+    print("Bem vindo ao Sistema de Vendas.")
+    print("-----------------------------------")
+    print("Escolha a opção abaixo do sistema:")
+    print("1 - Cadastro de Usuários")
+    print("2 - Realizar Venda")
+    print("3 - Cadastrar Produtos")
+    print("4 - Consultar Produtos")
+    print("-----------------------------------")
+    resp = int(input("Digite uma opção: "))
     
-    conexao.commit()
-    conexao.close()
-    
-except Exception:
-    print("Usuário ou Senha inválida")
-    
-    conexao.commit()
-    conexao.close()
+    match resp:
+        case 1:
+            print("1 - Tela: Cadastro de Usuários")
+        case 2:
+            print("2 - Tela: Realizar Venda")
+        case 3:
+            print("3 - Tela: Cadastrar Produtos")
+        case 4:
+            print("4 - Tela: Consultar Produtos")
 
-
-
-
-
+call = opcoes()
 #Vou iniciar e vou terminar outro dia, porque a viagem hoje foi longa. 300km
