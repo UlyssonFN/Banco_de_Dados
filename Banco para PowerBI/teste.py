@@ -7,7 +7,7 @@ cursor = conexao.cursor()
 
 cursor.execute("""
                SELECT NAME 
-                FROM PRAGMA_TABLE_INFO('USUARIOS');
+                FROM PRAGMA_TABLE_INFO('PRODUTOS');
                """)
 mostrar = cursor.fetchall()
 print(mostrar)
