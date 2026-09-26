@@ -30,4 +30,4 @@ except Exception:
     print("Usuário ou Senha inválida")
     
     conexao.commit()
-    conexao.close()
+    conexao.close() 

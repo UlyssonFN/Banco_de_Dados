@@ -8,7 +8,7 @@ cursor = conexao.cursor()
 cursor.execute("""
                INSERT INTO USUARIOS (NOME, NIVEL, SENHA, STATUS)
                VALUES (?, ?, ?, ?)           
-               """,("admin","ADMIN",12345,"ATIVO"))
+               """,("samanda","ADMIN",'S@mand@12',"ATIVO"))
 
 conexao.commit()
 

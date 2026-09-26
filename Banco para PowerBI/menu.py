@@ -14,6 +14,7 @@ def opcoes():
     match resp:
         case 1:
             print("1 - Tela: Cadastro de Usuários")
+            from usuarios import user
         case 2:
             print("2 - Tela: Realizar Venda")
         case 3:
@@ -22,4 +23,3 @@ def opcoes():
             print("4 - Tela: Consultar Produtos")
 
 call = opcoes()
-#Vou iniciar e vou terminar outro dia, porque a viagem hoje foi longa. 300km
