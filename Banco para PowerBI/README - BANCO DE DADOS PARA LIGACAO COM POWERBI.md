@@ -10,6 +10,7 @@ Criar regra de hierarquia de usuários (admin acesso a tudo, vendedor terá aces
 
  - Criar banco de dados 
  - Criar tabelas
+ - Criar funcoes.py
  - Criar app.py
  - Criar login.py
  - Criar menu.py
