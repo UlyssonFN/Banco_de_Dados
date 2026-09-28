@@ -53,13 +53,15 @@ Tabelas {USUARIOS, PRODUTOS, VENDAS}
 - DATA
 
 # Fluxo do Programa
-flowchart TD
-    Login[Login] --> DB[(BANCO DE DATOS)]
-    DB --> Login
-    
-    Menu[Menu] --> Vendas[Vendas]
-    
-    Cadastro[Cadastro de Produtos] --> DB
-    Vendas --> DB
+
+[Login] <==================> [Banco_de_Dados]
+   │                               ▲    ▲
+   ▼                               │    │
+[Menu]                             │    │
+   │                               │    │
+   ├─► [Vendas] ───────────────────┘    │
+   │                                    │
+   └─► [Produtos] ──────────────────────┘
+
 
 
