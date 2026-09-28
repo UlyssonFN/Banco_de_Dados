@@ -1,5 +1,5 @@
 #cadastro de produtos
-def cad_produtos():
+def cad_produtos_f():
     a = 1
     while a ==1:
         import sqlite3
@@ -33,4 +33,3 @@ def cad_produtos():
         
         
 
-call = cad_produtos()

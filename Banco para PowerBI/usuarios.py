@@ -1,5 +1,5 @@
 #usuarios
-def user():
+def user_f():
     import sqlite3
 
     conexao = sqlite3.connect("BDSYS.bd")
@@ -25,5 +25,3 @@ def user():
     cursor.close()
 
     print("Cadastro realizado com sucesso! ")
-    
-call = user()

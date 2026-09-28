@@ -1,7 +1,11 @@
 #menu
 
-def opcoes():
+def opcoes_f():
     from funcoes import space
+    from usuarios import user_f
+    from produtos import cad_produtos_f
+    from vendas import vendas_f
+    
     print("Bem vindo ao Sistema de Vendas.")
     space()
     print("Escolha a opção abaixo do sistema:")
@@ -16,19 +20,18 @@ def opcoes():
         case 1:
             print("1 - Tela: Cadastro de Usuários")
             space()
-            from usuarios import user
+            user_f()
             
             #depois tem que ajustar essa gambiarra, se bem que está funcional, por enquanto repetiremos o mesmo código para os outros cases.
         case 2:
             print("2 - Tela: Realizar Venda")
             space()
+            vendas_f()
             
         case 3:
             print("3 - Tela: Cadastrar Produtos")
             space()
-            from produtos import cad_produtos
+            cad_produtos_f()
             
         case 4:
             print("4 - Tela: Consultar Produtos")
-
-call = opcoes()

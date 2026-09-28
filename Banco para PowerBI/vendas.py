@@ -1,60 +1,54 @@
 #vendas
-import sqlite3
-import datetime as dt
+def vendas_f():
+    import sqlite3
+    import datetime as dt
+    from menu import opcoes_f
 
-data = dt.datetime.today()
+    a = 1
 
-conexao = sqlite3.connect("BDSYS.bd")
+    while a ==1:
+        data = dt.datetime.today()
 
-cursor = conexao.cursor()
+        conexao = sqlite3.connect("BDSYS.bd")
 
-barcode = int(input("Bipe o código de barra: "))
+        cursor = conexao.cursor()
 
-#Descrição
-cursor.execute("""
-               SELECT DESCRICAO FROM PRODUTOS WHERE COD_BARRA = (?);
-               """,(barcode,))
-product = cursor.fetchone()
-#Valor Unidade
-cursor.execute("""
-               SELECT VALOR_VENDA FROM PRODUTOS WHERE COD_BARRA = (?);
-               """,(barcode,))
-valor_unidade = cursor.fetchone()
-#Valor Total
-cursor.execute("""
-               SELECT COD FROM PRODUTOS WHERE COD_BARRA = (?);
-               """,(barcode,))
+        barcode = int(input("Bipe o código de barra: "))
 
-qtd = int(input("Digite a quantidade"))
+        #Descrição
+        cursor.execute("""
+                    SELECT DESCRICAO FROM PRODUTOS WHERE COD_BARRA = (?);
+                    """,(barcode,))
+        (product,) = cursor.fetchone()
+        #Valor Unidade
+        cursor.execute("""
+                    SELECT VALOR_VENDA FROM PRODUTOS WHERE COD_BARRA = (?);
+                    """,(barcode,))
+        (valor_unidade,) = cursor.fetchone()
+        qtd = int(input("Digite a quantidade: "))
+        valor_total = float(valor_unidade * qtd)
 
+        print("O seu produto é ",product," quantidade em unidades compradas é: ",qtd," o valor unidade é: ",valor_unidade," o valor total da compra fica: ",round(valor_total,2)," a data da compra é: ", data)
 
+        add = input("Adicionar produto? Press Enter:")
 
-print(product)
+        if not add:
+            cursor.execute("""
+                    INSERT INTO VENDAS (COD_BARRA, DESCRICAO, QUANTIDADE_VENDA, VALOR_VENDA, VALOR_TOTAL, DATA) VALUES (?,?,?,?,?,?);"""
+                    ,(barcode, product, qtd, valor_unidade, valor_total, data))
+            print("Produto adcionado")
+            conexao.commit()
+            cursor.close()    
+            
+            resp = input("Nova Compra? s/n: ")
 
-cursor.execute("""
-               SELECT COD_BARRA, DESCRICAO, VALOR_COMPRA, VALOR_VENDA, QUANTIDADE FROM PRODUTOS WHERE COD_BARRA = (?);
-               """,(barcode,))
+            if resp == "s" or resp == "S":
+                a = 1
+            else:
+                a = 0
+                print("Finalização do programa")
+                opcoes_f()
 
+               
 
-add = input("Adicionar produto? Press Enter")
-
-if add == "":
-    cursor.execute("""
-                   INSERT INTO VENDAS ('COD_BARRA', 'DESCRICAO', 'QUANTIDADE_VENDA', 'VALOR_VENDA', 'VALOR_TOTAL', 'DATA')""",(barcode))
-    print("Produto adcionado")
-else:
-    print("Nova Compra? s/n")
-    resp = input(" ")
-    if resp == "s" or resp == "S":
-        a = 1
-    else:
-        a = 0
-        print("Finalização do programa")
-        from menu import opcoes
-        opcoes()
-
-
-
-conexao.commit()
-
-cursor.close()
+        

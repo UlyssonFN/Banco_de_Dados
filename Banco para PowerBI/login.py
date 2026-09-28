@@ -1,5 +1,5 @@
 #login
-
+from menu import opcoes_f
 import sqlite3
 
 conexao = sqlite3.connect("BDSYS.bd")
@@ -20,8 +20,7 @@ try:
     (senha,) = cursor.fetchone()
 
     if user == usuario and password == senha:
-        from menu import opcoes
-        opcoes
+        opcoes_f()
     
     conexao.commit()
     conexao.close()
