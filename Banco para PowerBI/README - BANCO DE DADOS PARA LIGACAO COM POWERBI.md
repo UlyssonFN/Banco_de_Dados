@@ -54,14 +54,23 @@ Tabelas {USUARIOS, PRODUTOS, VENDAS}
 
 # Fluxo do Programa
 
-[Login] <==================> [Banco_de_Dados]
-   │                               ▲    ▲
-   ▼                               │    │
-[Menu]                             │    │
-   │                               │    │
-   ├─► [Vendas] ───────────────────┘    │
-   │                                    │
-   └─► [Produtos] ──────────────────────┘
+```mermaid
+flowchart TD
+    LOGIN[Login] -->|Valida usuário e senha| BD[(Banco de Dados)]
+    LOGIN --> MENU[Menu Principal]
+
+    MENU --> VENDAS[Vendas]
+    MENU --> CADASTRO[Cadastro de Produtos]
+
+    VENDAS -->|Consulta produtos| BD
+    VENDAS -->|Registra vendas| BD
+
+    CADASTRO -->|Cadastra produtos| BD
+    CADASTRO -->|Consulta produtos| BD
+
+    VENDAS --> MENU
+    CADASTRO --> MENU
+```
 
 
 
