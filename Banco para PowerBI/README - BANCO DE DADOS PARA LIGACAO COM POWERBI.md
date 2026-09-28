@@ -51,3 +51,13 @@ Tabelas {USUARIOS, PRODUTOS, VENDAS}
 - VALOR_VENDA - FLOAT
 - VALOR_TOTAL - FLOAT
 - DATA
+
+# Fluxo do Programa
+ - Login------------>BANCO DE DADOS<---- <----
+ -    <---------------------|            |   |
+ -   |                                   |   |
+ - Menu----------------------->          |   |
+ -   |                         |         |   |
+ - Cadastro de Produtos     Vendas------>    |
+ -   |                                       |
+ -   --------------------------------------->
