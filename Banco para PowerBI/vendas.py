@@ -49,6 +49,4 @@ def vendas_f():
                 print("Finalização do programa")
                 opcoes_f()
 
-               
-
-        
+#Tela de vendas funcionando somente com vendas de 1 item, não dá para adicionar mais itens. 
